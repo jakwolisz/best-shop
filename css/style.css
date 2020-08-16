@@ -1102,6 +1102,10 @@ article:nth-child(2) .left_side::after {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .calculator {
+        display: none;
+    }
     
 }
 
