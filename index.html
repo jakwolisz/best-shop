@@ -11,20 +11,20 @@
 </head>
 <body>
     <nav id="desktop_menu">
-        <div class="logo">
+        <div class="desktop_menu__logo">
             <p>BestShop</p>
         </div>
-        <ul class="links">
+        <ul class="desktop_menu__links">
             <li><p>WHY US</p></li>
             <li><p>BENEFITS</p></li>
             <li><p>PRICES</p></li>
             <li><p>CONTACT</p></li>
-            <img id="hamburgerButton" class="hamburgerButton" src="assets/hamburger_menu.svg">
-            <img id="iksButton" class="iksButton hidden" src="assets/iks.svg">
+            <img id="hamburgerButton"src="assets/hamburger_menu.svg">
+            <img id="iksButton" class="hidden" src="assets/iks.svg">
         </ul>
     </nav>
-    <nav id="mobile_menu" class="hidden">
-        <ul class="links">
+    <nav id="mobile_menu">
+        <ul class="mobile_menu__links">
             <li><p>WHY US</p></li>
             <li><p>BENEFITS</p></li>
             <li><p>PRICES</p></li>
@@ -32,21 +32,19 @@
         </ul>
     </nav>
     <header class="header">
-        <div class="text_button">
+        <div class="header__content">
             <p>Sell More!</p>
             <p>Open shop on our platform and increase your sales</p>
-                <div class="button_header">
-                    <p>Open your shop</p>
-                </div>
+            <a href="#" class="button button--animated">Open your shop</a>
         </div>
-        <div class="header_image"></div>
+        <div class="header__image"></div>
     </header>
     <section class="infographics">
         <p>The most popular sales platform in country</p>
         <ul>
             <li>
                 <div class="icon_1">
-                    <img class="icon" src="assets/Person.svg">
+                    <img src="assets/Person.svg">
                     <p>100000+</p>
                     <p>daily entries</p>
                 </div>
@@ -288,13 +286,13 @@ const iksButton = document.getElementById("iksButton");
 const mobile_menu = document.getElementById("mobile_menu")
 
 hamburgerButton.addEventListener("click", () => {
-   mobile_menu.classList.toggle("hidden")
+   mobile_menu.classList.toggle("active")
    iksButton.classList.toggle("hidden")
    hamburgerButton.classList.toggle("hidden")
 })
 
 iksButton.addEventListener("click", () => {
-    mobile_menu.classList.toggle("hidden")
+    mobile_menu.classList.toggle("active")
     hamburgerButton.classList.toggle("hidden")
     iksButton.classList.toggle("hidden")
 })
